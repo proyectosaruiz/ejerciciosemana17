@@ -1,23 +1,16 @@
 import "./App.css";
 import { useState } from "react";
+import Listas from "./component/list";
 
 function App() {
-  useState([
-    [
-      {
-        id: 1,
-        task: "Ir a la compra",
-        done: false,
-      },
-      {
-        id: 2,
-        task: "Hacer ejercicios de react",
-        done: true,
-      },
-    ],
-  ]);
+  const { setLista } = useState();
+  setLista();
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Listas />
+    </div>
+  );
 }
 
 export default App;
