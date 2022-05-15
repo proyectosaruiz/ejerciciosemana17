@@ -1,15 +1,26 @@
 import "./App.css";
 import { useState } from "react";
-import Listas from "./component/list";
+import Listas from "./component/Listas";
+import Form from "./component/Form";
 
 function App() {
-  const { setLista } = useState();
-  setLista();
-
+  const [lista, setlista] = useState([
+    {
+      id: 1,
+      task: "Ir a la compra",
+      done: false,
+    },
+    {
+      id: 2,
+      task: "Hacer ejercicios de react",
+      done: true,
+    },
+  ]);
   return (
-    <div className="App">
-      <Listas />
-    </div>
+    <>
+      <Listas data={lista} setlista={setlista} />;
+      <Form />
+    </>
   );
 }
 
