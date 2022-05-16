@@ -16,9 +16,12 @@ function App() {
       done: true,
     },
   ]);
+  const handlerLista = (value) => {
+    setlista(value);
+  };
   return (
     <>
-      <Listas data={lista} setlista={setlista} />;
+      <Listas data={lista} handlerLista={handlerLista} />
       <Form />
     </>
   );
