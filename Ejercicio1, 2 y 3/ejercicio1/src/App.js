@@ -17,7 +17,7 @@ function App() {
     },
   ]);
   const handlerLista = (value) => {
-    setlista([value]);
+    setlista([...value]);
   };
   return (
     <>
